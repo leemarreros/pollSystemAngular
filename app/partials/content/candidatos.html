@@ -1,0 +1,14 @@
+<div id="grid-candidates">
+    <div id="candidate-wrapper">
+        <div 
+            ng-repeat="candidate in candidates" 
+            id="card" 
+            style="background-image:url({{candidate.details.backPic}}); background-color:{{candidate.details.color}};"
+            ng-click="goto(candidate)">
+            <img ng-src="{{candidate.details.picture}}" id="card-picture-candidate">
+            <h1 class="card-name">{{candidate.details.name}}</h1>
+            <img ng-src="{{candidate.details.logo}}" id="card-logo">
+        </div>
+    </div>
+</div>
+

@@ -1,6 +1,6 @@
 var Partidos  =
-    [
-        {
+    {    
+     'pedro':   {
             "candidato": 'Pedro Kuczynki',
             "partido": "Peruanos por el Kambio",
             "propuestas": [
@@ -12,7 +12,7 @@ var Partidos  =
             "vicepresidentes": ['Martín Vizcarra', 'Mercedes Aráoz'],
             "social-media": ['https://www.facebook.com/PPK-Peruanos-Por-el-Kambio-550068215134018/', 'https://twitter.com/ppkamigo', 'http://www.peruanosporelkambio.pe/']
         },
-        {
+      'keiko':  {
             "candidato": 'Keiko Fujimori',
             "partido": "Fuerza Popular",
             "propuestas": [
@@ -24,7 +24,7 @@ var Partidos  =
             "vicepresidentes": ['José Chlimper', 'Vladimiro Huaroc'],
             "social-media": ['facebook.com/pfuerzapopular', 'https://twitter.com/PFuerzaPopular?ref_src=twsrc%5Etfw', 'http://keikofujimori.pe/']
         },
-        {
+       'alan': {
             "candidato": 'Alan García',
             "partido": "APRA",
             "propuestas": [
@@ -36,7 +36,7 @@ var Partidos  =
             "vicepresidentes": ['Lourdes Flores', 'David Salazar'],
             "social-media": ['https://www.facebook.com/PartidoApristaPeruanoORG', 'https://twitter.com/alangarciaperu', 'http://www.apra.org.pe/']
         },
-        {
+       'alfredo':  {
             "candidato": 'Alfredo Barnechea',
             "partido": "Acción Popular",
             "propuestas": [
@@ -48,7 +48,7 @@ var Partidos  =
             "vicepresidentes": ['Víctor García Belaúnde', 'Edmundo del Águila'],
             "social-media": ['https://www.facebook.com/partidoaccionpopular?fref=ts', 'https://twitter.com/accionpopular', 'http://accionpopular.com.pe/']
         },
-        {
+        'julio': {
             "candidato": 'Julio Guzmán',
             "partido": "Todos por el Perú",
             "propuestas": [
@@ -60,7 +60,7 @@ var Partidos  =
             "vicepresidentes": ['Juana Maura', 'Carolina Lizárraga'],
             "social-media": ['https://www.facebook.com/julioguzman2016', 'https://twitter.com/julioguzmanperu', 'http://julioguzman.pe/']
         },
-        {
+        'cesar': {
             "candidato": 'César Acuña',
             "partido": "Alianza para el Progreso del Perú",
             "propuestas": [
@@ -71,6 +71,6 @@ var Partidos  =
                 ],
             "vicepresidentes": ['Anel Townsend', 'Humberto Lay'],
             "social-media": ['https://www.facebook.com/PeruAPP/app/425088890879889/', 'https://twitter.com/APP_Peru', 'http://www.app.pe/']
-        },
-    ]   
-   module.exports = Partidos;
+        }
+    };   
+module.exports = Partidos;

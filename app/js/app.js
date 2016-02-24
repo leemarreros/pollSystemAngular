@@ -11,22 +11,37 @@
         });
         
         $routeProvider.when('/button/candidatos', {
-            templateUrl: 'partials/candidatos.html',
+            templateUrl: 'partials/content/candidatos.html',
             topNav: 'partials/top-nav.html',
-            leftNav: 'partials/left-nav.html'
+            leftNav: 'partials/left-nav.html',
+            controller: 'CandidatosController'
         });
         
         $routeProvider.when('/button/encuesta', {
-            templateUrl: 'partials/encuesta.html',
+            templateUrl: 'partials/content/encuesta.html',
             topNav: 'partials/top-nav.html',
             leftNav: 'partials/left-nav.html'
         });
         
         $routeProvider.when('/button/perfil', {
-            templateUrl: 'partials/perfil.html',
+            templateUrl: 'partials/content/perfil.html',
             topNav: 'partials/top-nav.html',
             leftNav: 'partials/left-nav.html'
         });
+        
+        $routeProvider.when('/button/candidatos/:id', {
+            templateUrl: 'partials/content/candidato-detail.html',
+            topNav: 'partials/top-nav.html',
+            leftNav: 'partials/left-nav.html',
+            controller: 'CandidatoPageController',
+            resolve: {
+                detailsCandidate: ['PageDataService', '$route', function (PageDataService, $route) {
+                    var candidate = PageDataService.getPage($route.current.params.id);
+                    console.log('params', $route.current.params.id, candidate);
+                    return candidate;
+                }],
+            }
+        })
         
         $routeProvider.otherwise({redirectTo: '/'});
     }]);
