@@ -3,7 +3,8 @@
     angular.module('app', [
         'ngRoute',
         'ngMaterial',
-        'ngAnimate'
+        'ngAnimate',
+        'ngtweet'
     ])
     .config(['$routeProvider', function($routeProvider) {
         $routeProvider.when('/', {
@@ -36,9 +37,7 @@
             controller: 'CandidatoPageController',
             resolve: {
                 detailsCandidate: ['PageDataService', '$route', function (PageDataService, $route) {
-                    var candidate = PageDataService.getPage($route.current.params.id);
-                    console.log('params', $route.current.params.id, candidate);
-                    return candidate;
+                    return PageDataService.getPage($route.current.params.id);
                 }],
             }
         })

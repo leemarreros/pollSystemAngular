@@ -28,9 +28,10 @@
                         ],
                     "color": '#FC178F',
                     "candidatopic": 'img/pedro-card.png',
-                    "vicepics": ['martin-pic.png', 'mercedes-pic.png'],
+                    "vicepics": ['img/martin-pic.png', 'img/mercedes-pic.png'],
                     "vicepresidentes": ['Martín Vizcarra', 'Mercedes Aráoz'],
-                    "social-media": ['https://www.facebook.com/PPK-Peruanos-Por-el-Kambio-550068215134018/', 'https://twitter.com/ppkamigo', 'http://www.peruanosporelkambio.pe/']
+                    "social-media": ['https://www.facebook.com/PPK-Peruanos-Por-el-Kambio-550068215134018/', 'https://twitter.com/ppkamigo', 'http://www.peruanosporelkambio.pe/'],
+                    "tweeterid": "702562625855467520"
                 })
             });
             
@@ -48,9 +49,10 @@
                         ],
                     "color": '#FF6600',
                     "candidatopic": 'img/keiko-card.png',
-                    "vicepics": ['jose-pic.png', 'vladimiro-pic.png'],
+                    "vicepics": ['img/jose-pic.png', 'img/vladimiro-pic.png'],
                     "vicepresidentes": ['José Chlimper', 'Vladimiro Huaroc'],
-                    "social-media": ['facebook.com/pfuerzapopular', 'https://twitter.com/PFuerzaPopular?ref_src=twsrc%5Etfw', 'http://keikofujimori.pe/']
+                    "social-media": ['facebook.com/pfuerzapopular', 'https://twitter.com/PFuerzaPopular?ref_src=twsrc%5Etfw', 'http://keikofujimori.pe/'],
+                    "tweeterid": "702563457313312768"
                 })
             });
             
@@ -68,9 +70,10 @@
                         ],
                     "color": '#FC0204',
                     "candidatopic": 'img/alan-card.png',
-                    "vicepics": ['lourdes-pic.png', 'david-pic.png'],
+                    "vicepics": ['img/lourdes-pic.png', 'img/david-pic.png'],
                     "vicepresidentes": ['Lourdes Flores', 'David Salazar'],
-                    "social-media": ['https://www.facebook.com/PartidoApristaPeruanoORG', 'https://twitter.com/alangarciaperu', 'http://www.apra.org.pe/']
+                    "social-media": ['https://www.facebook.com/PartidoApristaPeruanoORG', 'https://twitter.com/alangarciaperu', 'http://www.apra.org.pe/'],
+                    "tweeterid": "702624555819401216"
                 })
             });
             
@@ -88,9 +91,10 @@
                         ],
                     "color": '#CD3333',
                     "candidatopic": 'img/alfredo-card.png',
-                    "vicepics": ['victor-pic.png', 'edmundo-pic.png'],
+                    "vicepics": ['img/victor-pic.png', 'img/edmundo-pic.png'],
                     "vicepresidentes": ['Víctor García Belaúnde', 'Edmundo del Águila'],
-                    "social-media": ['https://www.facebook.com/partidoaccionpopular?fref=ts', 'https://twitter.com/accionpopular', 'http://accionpopular.com.pe/']
+                    "social-media": ['https://www.facebook.com/partidoaccionpopular?fref=ts', 'https://twitter.com/accionpopular', 'http://accionpopular.com.pe/'],
+                    "tweeterid": "702624764179795968"
                 })
             });
             
@@ -108,9 +112,10 @@
                         ],
                     "color": '#804794',
                     "candidatopic": 'img/julio-card.png',
-                    "vicepics": ['juaan-pic.png', 'carolina-pic.png'],
+                    "vicepics": ['img/juana-pic.png', 'img/carolina-pic.png'],
                     "vicepresidentes": ['Juana Maura', 'Carolina Lizárraga'],
-                    "social-media": ['https://www.facebook.com/julioguzman2016', 'https://twitter.com/julioguzmanperu', 'http://julioguzman.pe/']
+                    "social-media": ['https://www.facebook.com/julioguzman2016', 'https://twitter.com/julioguzmanperu', 'http://julioguzman.pe/'],
+                    "tweeterid": "702624876675268608"                    
                 })
             });
             
@@ -129,8 +134,9 @@
                     "vicepresidentes": ['Anel Townsend', 'Humberto Lay'],
                     "social-media": ['https://www.facebook.com/PeruAPP/app/425088890879889/', 'https://twitter.com/APP_Peru', 'http://www.app.pe/'],
                     "color": '#004B9C',
-                    "candidatopic": 'img/pedro-card.png',
-                    "vicepics": ['anel-pic.png', 'humberto-pic.png'],
+                    "candidatopic": 'img/cesar-card.png',
+                    "vicepics": ['img/anel-pic.png', 'img/humberto-pic.png'],
+                    "tweeterid": "702624969864261632"
                 })
             });
             
@@ -152,5 +158,30 @@
         
         init();
         return service;
+    }
+})();
+
+
+(function() {
+'use strict';
+
+    angular
+        .module('app')
+        .factory('TwitterService', TwitterService);
+
+    TwitterService.$inject = ['$timeout'];
+    function TwitterService($timeout) {
+        var service = {}
+        service.loadAllWidgets = function() {
+            !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
+         };
+
+         service.destroyAllWidgets = function() {
+            var $ = function (id) { return document.getElementById(id); };
+            var twitter = $('twitter-wjs');
+            if (twitter != null)
+                twitter.remove();
+         };
+         return service;
     }
 })();

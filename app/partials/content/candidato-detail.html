@@ -1,4 +1,46 @@
-<div >
-    <h1>Candidato details</h1>
-    <h2>{{pageInfo}}</h2>
+<div>
+    <div id="left-side">
+        <div>
+            <h1 class="title-page-details">PROPUESTAS</h1>
+        </div>
+        <div class="carousel">
+            <div class="item-carousel" 
+                ng-repeat="prop in pageInfo.details.propuestas"
+                style="background-color:{{pageInfo.details.color}}">
+                <h1 class="prop-text">{{prop}}</h1>
+            </div>
+        </div>
+        <div class="team">
+            <div class="wrap-cand">
+                <img src="{{pageInfo.details.candidatopic}}" class='pic-detail'>
+                <div class='candidate-des'>
+                    <h1>{{pageInfo.details.candidato}}</h1>
+                    <h1>candidato presidencial</h1>
+                </div>
+            </div>
+            <div class="wrap-cand">
+                <img src="{{pageInfo.details.vicepics[0]}}" class='pic-detail'>
+                <div class='candidate-des'>
+                    <h1>{{pageInfo.details.vicepresidentes[0]}}</h1>
+                    <h1>candidato 1ra vicepresidencia</h1>
+                </div>
+            </div>
+            <div class="wrap-cand">
+                <img src="{{pageInfo.details.vicepics[1]}}" class='pic-detail'>
+                <div class='candidate-des'>
+                    <h1>{{pageInfo.details.vicepresidentes[1]}}</h1>
+                    <h1>candidato 2da vicepresidencia</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="right-side">
+        <div class="tweeter">
+            <twitter-timeline>
+                <a class="twitter-timeline" 
+                href="https://twitter.com/ppkamigo" 
+                data-widget-id="{{pageInfo.details.tweeterid}}"></a>
+            <twitter-timeline>
+        </div>
+    </div>
 </div>

@@ -5,11 +5,11 @@
         .module('app')
         .controller('CandidatoPageController', CandidatoPageController);
 
-    CandidatoPageController.$inject = ['$scope', 'PageDataService', 'detailsCandidate'];
-    function CandidatoPageController($scope, PageDataService, detailsCandidate) {
-        
+    CandidatoPageController.$inject = ['$scope', 'PageDataService', 'detailsCandidate', 'TwitterService'];
+    function CandidatoPageController($scope, PageDataService, detailsCandidate, TwitterService) {
+        TwitterService.destroyAllWidgets();
+        TwitterService.loadAllWidgets();
         var init = function() {
-            console.log('init CandidatoPageController', detailsCandidate);
             $scope.pageInfo = detailsCandidate;
         };
         init();
