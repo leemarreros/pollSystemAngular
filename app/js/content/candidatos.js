@@ -77,7 +77,7 @@
             
             candidates.push({
                 details: new Candidate({
-                    label: 'ésar',
+                    label: 'cesar',
                     name: 'César Acuña',
                     picture: 'img/cesar-card.png',
                     logo: 'img/cesar-logo.png',
