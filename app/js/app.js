@@ -13,14 +13,14 @@
         
         $routeProvider.when('/button/candidatos', {
             templateUrl: 'partials/content/candidatos.html',
-            topNav: 'partials/top-nav.html',
+            topNav: 'partials/top-nav/top-nav.html',
             leftNav: 'partials/left-nav.html',
             controller: 'CandidatosController'
         });
         
         $routeProvider.when('/button/encuesta', {
             templateUrl: 'partials/content/encuesta.html',
-            topNav: 'partials/top-nav.html',
+            topNav: 'partials/top-nav/top-nav-e.html',
             leftNav: 'partials/left-nav.html',
             controller: 'PollController',
             resolve: {
@@ -32,13 +32,13 @@
         
         $routeProvider.when('/button/perfil', {
             templateUrl: 'partials/content/perfil.html',
-            topNav: 'partials/top-nav.html',
+            topNav: 'partials/top-nav/top-nav-p.html',
             leftNav: 'partials/left-nav.html'
         });
         
         $routeProvider.when('/button/candidatos/:id', {
             templateUrl: 'partials/content/candidato-detail.html',
-            topNav: 'partials/top-nav.html',
+            topNav: 'partials/top-nav/top-nav.html',
             leftNav: 'partials/left-nav.html',
             controller: 'CandidatoPageController',
             resolve: {

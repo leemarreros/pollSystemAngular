@@ -17,6 +17,38 @@
     width: 100%;
     min-height: 86px;
     max-height: 86px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+#top-nav > div {
+    display: flex;
+    justify-content: center;    
+    align-items: center;   
+    flex: 1; 
+}
+
+#top-nav h1 {
+    font-family: Avenir;
+    font-size: 23px;
+    color: white;
+    font-weight: 300;
+}
+
+#top-nav div:nth-child(1) h1{ 
+}
+
+#user-top-info h1{
+    font-size: 18px;    
+    font-weight: 100;
+    letter-spacing: 2px;
+}
+
+#top-nav img {
+    width: 56px;
+    height: 56px;
+    margin-left: 20px;
 }
 
 #left-nav {

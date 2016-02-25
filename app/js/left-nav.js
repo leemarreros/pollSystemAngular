@@ -5,8 +5,8 @@
         .module('app')
         .controller('LeftNavController', LeftNavController);
 
-    LeftNavController.$inject = ['$scope', '$location'];
-    function LeftNavController($scope, $location) {
+    LeftNavController.$inject = ['$scope', '$location' ,'LeftAndTopService'];
+    function LeftNavController($scope, $location, LeftAndTopService) {
         
         function Button(args) {
             this.name = args.name;
@@ -15,6 +15,7 @@
             this.image = args.image;
             this.activated = args.activated;
         }
+        
         
         var buttons = [];
         function createButtons() {
@@ -52,7 +53,9 @@
             $scope.buttons = createButtons();
         }
         var lastSelected = "candidatos";
-        
+        $scope.lastSelected = lastSelected;
+        $scope.title = "Lista de Candidatos";
+         
         $scope.goto = function(button) {
             if (lastSelected == button.details.name){
                 return;
@@ -61,10 +64,10 @@
                 if (buttonCurrent.details.name == lastSelected) buttonCurrent.details.activated = false;
                 if (buttonCurrent.details.name == button.details.name) buttonCurrent.details.activated = true;
             })
-            console.log(buttons);
             lastSelected = button.details.name;
             $location.path('/button/' + button.details.name)
         }
+        
         
         function init() {
             lunchButtons();

@@ -300,3 +300,25 @@
         return service;
     }
 })();
+
+(function() {
+'use strict';
+
+    angular
+        .module('app')
+        .factory('LeftAndTopService', LeftAndTopService);
+
+    function LeftAndTopService() {
+       var service = {};
+       var current = 'candidatos';
+       
+       service.updateCurrent = function(name) {
+           current = name;
+       }
+       service.getCurrent = function() {
+           return current;
+       }
+       
+       return service;
+    }
+})();
