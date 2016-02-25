@@ -21,7 +21,13 @@
         $routeProvider.when('/button/encuesta', {
             templateUrl: 'partials/content/encuesta.html',
             topNav: 'partials/top-nav.html',
-            leftNav: 'partials/left-nav.html'
+            leftNav: 'partials/left-nav.html',
+            controller: 'PollController',
+            resolve: {
+                pollData: ['PollDataService', '$route', function(PollDataService, $route) {
+                    return PollDataService.getCandidates();
+                }]
+            }
         });
         
         $routeProvider.when('/button/perfil', {

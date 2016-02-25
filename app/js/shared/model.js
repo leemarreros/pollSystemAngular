@@ -22,3 +22,24 @@
         return CandidatoPage;
     }
 })();
+
+
+(function() {
+'use strict';
+
+    angular
+        .module('app')
+        .factory('PollDetails', PollDetails);
+
+    function PollDetails() {
+        function PollCandidate(args) {
+            this.name = args.name;
+            this.color = args.color;
+            this.picture = args.picture;
+            this.votes = args.votes;
+            this.percentage = args.percentage;
+            this.selected = args.selected;
+        }
+        return PollCandidate;
+    }
+})();

@@ -17,7 +17,7 @@
             pages.push({
                 details: new PageDetails({
                     "label": "pedro",
-                    "logo": 'img/pedro-logo.png',
+                    "logo": 'img/pedro-logo-b.png',
                     "candidato": 'Pedro Kuczynki',
                     "partido": "Peruanos por el Kambio",
                     "propuestas": [
@@ -30,7 +30,7 @@
                     "candidatopic": 'img/pedro-card.png',
                     "vicepics": ['img/martin-pic.png', 'img/mercedes-pic.png'],
                     "vicepresidentes": ['Martín Vizcarra', 'Mercedes Aráoz'],
-                    "social-media": ['https://www.facebook.com/PPK-Peruanos-Por-el-Kambio-550068215134018/', 'https://twitter.com/ppkamigo', 'http://www.peruanosporelkambio.pe/'],
+                    "social_media": ['https://www.facebook.com/PPK-Peruanos-Por-el-Kambio-550068215134018/', 'https://twitter.com/ppkamigo', 'http://www.peruanosporelkambio.pe/'],
                     "tweeterid": "702562625855467520"
                 })
             });
@@ -38,7 +38,7 @@
             pages.push({
                 details: new PageDetails({
                     "label": "keiko",
-                    "logo": 'img/keiko-logo.png',
+                    "logo": 'img/keiko-logo-b.png',
                     "candidato": 'Keiko Fujimori',
                     "partido": "Fuerza Popular",
                     "propuestas": [
@@ -51,7 +51,7 @@
                     "candidatopic": 'img/keiko-card.png',
                     "vicepics": ['img/jose-pic.png', 'img/vladimiro-pic.png'],
                     "vicepresidentes": ['José Chlimper', 'Vladimiro Huaroc'],
-                    "social-media": ['facebook.com/pfuerzapopular', 'https://twitter.com/PFuerzaPopular?ref_src=twsrc%5Etfw', 'http://keikofujimori.pe/'],
+                    "social_media": ['facebook.com/pfuerzapopular', 'https://twitter.com/PFuerzaPopular?ref_src=twsrc%5Etfw', 'http://keikofujimori.pe/'],
                     "tweeterid": "702563457313312768"
                 })
             });
@@ -59,7 +59,7 @@
             pages.push({
                 details: new PageDetails({
                     "label": "alan",
-                    "logo": 'img/alan-logo.png',
+                    "logo": 'img/alan-logo-b.png',
                     "candidato": 'Alan García',
                     "partido": "APRA",
                     "propuestas": [
@@ -72,7 +72,7 @@
                     "candidatopic": 'img/alan-card.png',
                     "vicepics": ['img/lourdes-pic.png', 'img/david-pic.png'],
                     "vicepresidentes": ['Lourdes Flores', 'David Salazar'],
-                    "social-media": ['https://www.facebook.com/PartidoApristaPeruanoORG', 'https://twitter.com/alangarciaperu', 'http://www.apra.org.pe/'],
+                    "social_media": ['https://www.facebook.com/PartidoApristaPeruanoORG', 'https://twitter.com/alangarciaperu', 'http://www.apra.org.pe/'],
                     "tweeterid": "702624555819401216"
                 })
             });
@@ -80,7 +80,7 @@
             pages.push({
                 details: new PageDetails({
                     "label": "alfredo",
-                    "logo": 'img/alfredo-logo.png',
+                    "logo": 'img/alfredo-logo-b.png',
                     "candidato": 'Alfredo Barnechea',
                     "partido": "Acción Popular",
                     "propuestas": [
@@ -93,7 +93,7 @@
                     "candidatopic": 'img/alfredo-card.png',
                     "vicepics": ['img/victor-pic.png', 'img/edmundo-pic.png'],
                     "vicepresidentes": ['Víctor García Belaúnde', 'Edmundo del Águila'],
-                    "social-media": ['https://www.facebook.com/partidoaccionpopular?fref=ts', 'https://twitter.com/accionpopular', 'http://accionpopular.com.pe/'],
+                    "social_media": ['https://www.facebook.com/partidoaccionpopular?fref=ts', 'https://twitter.com/accionpopular', 'http://accionpopular.com.pe/'],
                     "tweeterid": "702624764179795968"
                 })
             });
@@ -101,7 +101,7 @@
             pages.push({
                 details: new PageDetails({
                     "label": "julio",
-                    "logo": 'img/julio-logo.png',
+                    "logo": 'img/julio-logo-b.png',
                     "candidato": 'Julio Guzmán',
                     "partido": "Todos por el Perú",
                     "propuestas": [
@@ -114,7 +114,7 @@
                     "candidatopic": 'img/julio-card.png',
                     "vicepics": ['img/juana-pic.png', 'img/carolina-pic.png'],
                     "vicepresidentes": ['Juana Maura', 'Carolina Lizárraga'],
-                    "social-media": ['https://www.facebook.com/julioguzman2016', 'https://twitter.com/julioguzmanperu', 'http://julioguzman.pe/'],
+                    "social_media": ['https://www.facebook.com/julioguzman2016', 'https://twitter.com/julioguzmanperu', 'http://julioguzman.pe/'],
                     "tweeterid": "702624876675268608"                    
                 })
             });
@@ -122,7 +122,7 @@
             pages.push({
                 details: new PageDetails({
                     "label": "cesar",
-                    "logo": 'img/cesar-logo.png',
+                    "logo": 'img/cesar-logo-b.png',
                     "candidato": 'César Acuña',
                     "partido": "Alianza para el Progreso del Perú",
                     "propuestas": [
@@ -132,7 +132,7 @@
                         'Comenzar la construcción de el "Tren bala" de Tacna a Tumbes'
                         ],
                     "vicepresidentes": ['Anel Townsend', 'Humberto Lay'],
-                    "social-media": ['https://www.facebook.com/PeruAPP/app/425088890879889/', 'https://twitter.com/APP_Peru', 'http://www.app.pe/'],
+                    "social_media": ['https://www.facebook.com/PeruAPP/app/425088890879889/', 'https://twitter.com/APP_Peru', 'http://www.app.pe/'],
                     "color": '#004B9C',
                     "candidatopic": 'img/cesar-card.png',
                     "vicepics": ['img/anel-pic.png', 'img/humberto-pic.png'],
@@ -183,5 +183,99 @@
                 twitter.remove();
          };
          return service;
+    }
+})();
+
+
+(function() {
+'use strict';
+
+    angular
+        .module('app')
+        .factory('PollDataService', PollDataService);
+
+    PollDataService.$inject = ['PollDetails'];
+    function PollDataService(PollDetails) {
+         var service = {}
+        var candidatesData = [];
+        service.getCandidates = function() {
+            return candidatesData;
+        }
+        
+        function loadCandidatesData() {
+            candidatesData.push({
+                details: new PollDetails({
+                    "name": "Pedro Kuczynki",
+                    "color": "#FC178F",
+                    "picture": "img/pedro-card.png",
+                    "votes": 90,
+                    "percentage": "9%",
+                    "selected": false
+                })
+            });
+            
+            candidatesData.push({
+                details: new PollDetails({
+                    "name": "Keiko Fujimori",
+                    "color": "#FF6600",
+                    "picture": "img/keiko-card.png",
+                    "votes": 300,
+                    "percentage": "30%",
+                    "selected": false
+                })
+            });
+            
+            candidatesData.push({
+                details: new PollDetails({
+                    "name": "Alan García",
+                    "color": "#FC0204",
+                    "picture": "img/alan-card.png",
+                    "votes": 50,
+                    "percentage": "5%",
+                    "selected": false
+                })
+            });
+            
+            candidatesData.push({
+                details: new PollDetails({
+                    "name": "Alfredo Barnechea",
+                    "color": "#CD3333",
+                    "picture": "img/alfredo-card.png",
+                    "votes": 40,
+                    "percentage": "4%",
+                    "selected": false
+                })
+            });
+            
+            candidatesData.push({
+                details: new PollDetails({
+                    "name": "Julio Guzmán",
+                    "color": "#804794",
+                    "picture": "img/julio-card.png",
+                    "votes": 180,
+                    "percentage": "18%",
+                    "selected": false
+                })
+            });
+            
+            candidatesData.push({
+                details: new PollDetails({
+                    "name": "César Acuña",
+                    "color": "#004B9C",
+                    "picture": "img/cesar-card.png",
+                    "votes": 60,
+                    "percentage": "6%",
+                    "selected": false
+                })
+            });
+        }
+        
+        
+         var init = function () {
+            loadCandidatesData();
+        };
+        
+        init();
+        return service;
     }
 })();

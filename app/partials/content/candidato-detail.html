@@ -14,27 +14,32 @@
             <div class="wrap-cand">
                 <img src="{{pageInfo.details.candidatopic}}" class='pic-detail'>
                 <div class='candidate-des'>
-                    <h1>{{pageInfo.details.candidato}}</h1>
+                    <h1 style="font-weight: bold;">{{pageInfo.details.candidato}}</h1>
                     <h1>candidato presidencial</h1>
                 </div>
             </div>
             <div class="wrap-cand">
                 <img src="{{pageInfo.details.vicepics[0]}}" class='pic-detail'>
                 <div class='candidate-des'>
-                    <h1>{{pageInfo.details.vicepresidentes[0]}}</h1>
+                    <h1 style="font-weight: bold;">{{pageInfo.details.vicepresidentes[0]}}</h1>
                     <h1>candidato 1ra vicepresidencia</h1>
                 </div>
             </div>
             <div class="wrap-cand">
                 <img src="{{pageInfo.details.vicepics[1]}}" class='pic-detail'>
                 <div class='candidate-des'>
-                    <h1>{{pageInfo.details.vicepresidentes[1]}}</h1>
+                    <h1 style="font-weight: bold;">{{pageInfo.details.vicepresidentes[1]}}</h1>
                     <h1>candidato 2da vicepresidencia</h1>
                 </div>
             </div>
         </div>
     </div>
     <div id="right-side">
+        
+        <div>
+            <img class="logo-page-details" ng-src="{{pageInfo.details.logo}}">
+        </div>
+    
         <div class="tweeter">
             <twitter-timeline>
                 <a class="twitter-timeline" 
@@ -42,5 +47,14 @@
                 data-widget-id="{{pageInfo.details.tweeterid}}"></a>
             <twitter-timeline>
         </div>
+        
+        <div>
+            <div class="social-media">
+                <a target="_blank" href="{{pageInfo.details.social_media[0]}}"><img src="img/facebook-icon.png"></a>
+                <a target="_blank" href="{{pageInfo.details.social_media[1]}}"><img src="img/linkedin-icon.png"></a>
+                <a target="_blank" href="{{pageInfo.details.social_media[2]}}"><img src="img/www-icon.png"></a>
+            </div>
+        </div>
+        
     </div>
 </div>

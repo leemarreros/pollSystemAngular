@@ -134,7 +134,7 @@
  
  #left-side {
      float: left;
-     width: 70%;
+     width: 65%;
      height: 100%;
  }
  
@@ -227,12 +227,31 @@
  
  #right-side {
     float: left;
-     width: 30%;  
+     width: 35%;  
      height: 100%;
-      
-     background-color: lightseagreen;
+ }
+ 
+ .logo-page-details {
+     display: block;
+     margin-left: auto;
+     margin-right: auto;
+     margin-top: 25px;
+     margin-bottom: 25px;
  }
  
  .tweeter {
-     width: 375px;
+     width: 300px;
+     height: 600px;
+     background-color: white;
+     margin: auto;
+ }
+ 
+ .social-media {
+     width: 50%;
+     margin: 0 auto;
+     margin-top: 15px;
+ }
+ 
+ .social-media a {
+     padding-left: 25px;
  }
