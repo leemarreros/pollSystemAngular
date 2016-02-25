@@ -1,4 +1,3 @@
 <div ng-repeat="button in buttons" id="button-left" ng-click="goto(button)">
-        <img ng-src="{{button.details.image}}" id="img-button">
-        <h1 class="button-text">{{button.details.title}}</h1>
+        <img ng-src="{{button.details.activated ? button.details.imageAct : button.details.image}}" id="img-button">
 </div>

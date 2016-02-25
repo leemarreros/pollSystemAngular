@@ -212,6 +212,16 @@
                }
            });
        }
+       
+       service.reverseVote = function(name) {
+            angular.forEach(candidatesData, function(candidate, index) {
+               if (name == candidate.details.name && candidate.details.selected) {
+                   candidate.details.votes--;
+                   candidate.details.selected = false;
+                   return;                   
+               }
+           });
+       }
         
         function loadCandidatesData() {
             candidatesData.push({
@@ -241,7 +251,7 @@
                     "name": "Alan García",
                     "color": "#FC0204",
                     "picture": "img/alan-card.png",
-                    "votes": 50,
+                    "votes": 40,
                     "percentage": "5%",
                     "selected": false
                 })

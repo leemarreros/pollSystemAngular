@@ -8,13 +8,20 @@
     PollController.$inject = ['$scope', 'PollDataService', 'pollData'];
     function PollController($scope, PollDataService, pollData) {
         var userHasVoted = false;
-        var total=0;
-        angular.forEach(pollData, function(poll) {
-            total+=poll.details.votes;
-        })
-        var init = function() {
-            $scope.pollData = pollData;
+        var total;
+        var lastSelected;
+
+        function calculateTotal() {
+            total=0;            
+            angular.forEach(pollData, function(poll) {
+                total+=poll.details.votes;
+            })
             $scope.total = total;
+        }
+        
+        var init = function() {
+            calculateTotal();
+            $scope.pollData = pollData;
         };
         
         $scope.getPercentage = function(votes) {
@@ -23,16 +30,29 @@
         
         
         $scope.callVote = function(name) {
-            // verify if user already voted
-            // var index = PollDataService.verifyVote(name);
-            var lastSelected;
             if(!userHasVoted) {
                 userHasVoted = true;
                 PollDataService.executeVote(name);
                 lastSelected = name;
+                calculateTotal()
                 return;
             }
             
+            if (name == lastSelected) {
+                userHasVoted = false;
+                lastSelected = null;
+                PollDataService.reverseVote(name);
+                calculateTotal()
+                return;
+            }
+            
+            if (name != lastSelected) {
+                PollDataService.reverseVote(lastSelected);
+                PollDataService.executeVote(name);
+                lastSelected = name;
+                calculateTotal()
+                return;
+            }
         }
         
         init();
