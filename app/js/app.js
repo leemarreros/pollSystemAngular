@@ -24,7 +24,7 @@
             leftNav: 'partials/left-nav.html',
             controller: 'PollController',
             resolve: {
-                pollData: ['PollDataService', '$route', function(PollDataService, $route) {
+                pollData: ['PollDataService', function(PollDataService) {
                     return PollDataService.getCandidates();
                 }]
             }

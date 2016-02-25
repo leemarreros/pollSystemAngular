@@ -1,1 +1,21 @@
-<h1>Encuesta</h1>
+<div class='poll-frame'>
+    <div ng-repeat="poll in pollData | orderBy: '-details.votes'" class='row-polldata'>
+        <div class="graph">
+            <div class="candidate-info" style="background-color:{{poll.details.color}};">
+                <img ng-src="{{poll.details.picture}}" class="poll-picture" style="border-color:{{poll.details.color}}">
+                <h1>{{poll.details.name}}</h1>
+            </div>
+            <div class="bar-graph-side">
+                <div class='bar-graph' style="width:{{getPercentage(poll.details.votes)*492}}px">
+                </div>
+                <div class='bar-number'>
+                    <h1>{{poll.details.percentage}}</h1>
+                    <h1>{{poll.details.votes}} votes</h1>
+                </div>
+            </div>
+        </div>
+        <div class='vote-button-side' ng-click="callVote(poll.details.name)">
+            <img ng-src="{{poll.details.selected ? 'img/elegido-button.png' : 'img/votar-button.png'}}" class='election-button'>
+        </div>
+    </div>
+</div>

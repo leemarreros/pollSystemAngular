@@ -196,11 +196,22 @@
 
     PollDataService.$inject = ['PollDetails'];
     function PollDataService(PollDetails) {
-         var service = {}
+        var service = {}
         var candidatesData = [];
+        
         service.getCandidates = function() {
             return candidatesData;
         }
+        
+       service.executeVote = function(name) {
+           angular.forEach(candidatesData, function(candidate, index) {
+               if (name == candidate.details.name && !candidate.details.selected) {
+                   candidate.details.votes++;
+                   candidate.details.selected = true;
+                   return;                   
+               }
+           });
+       }
         
         function loadCandidatesData() {
             candidatesData.push({
