@@ -2,3 +2,5 @@ node_modules
 pollSystem.sketch
 images-all
 .vscode
+bower_components/
+js/vendor/
