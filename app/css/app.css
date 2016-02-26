@@ -469,3 +469,27 @@
     
 }
 
+.save-button {
+    margin-left: 80px;
+    background-color: #1a237e;
+    height: 50px;
+    box-shadow: 3px 3px 3px grey;
+    color: white;
+    width: 25%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer; cursor: hand;
+}
+
+.save-button:active {
+    background-color: #6fefb0    
+}
+
+.save-button h1 {
+    font-family: Avenir;
+    font-size: 29;
+    font-weight: 600;
+    margin: 0;
+    font-style: italic;
+}

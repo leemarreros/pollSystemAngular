@@ -7,20 +7,29 @@
 
     TopNavController.$inject = ['$scope', 'LeftAndTopService', 'UpdatePictureService', '$timeout'];
     function TopNavController($scope, LeftAndTopService, UpdatePictureService, $timeout) {
-
-       console.log('getcurrent', LeftAndTopService.getCurrent());
+       
+       $scope.name = UpdatePictureService.getUserData().name;
        $scope.title =  LeftAndTopService.getCurrent();
        $scope.image =  UpdatePictureService;      
        $scope.pictureProfile = UpdatePictureService.retrievePic();
        $scope.$watch('image', function(newValue, oldValue) {
-            $timeout(function() {
-                var path = UpdatePictureService.retrievePicPath();
-                if (path) {
-                    $scope.pictureProfile = path;    
-                } else {
-                    $scope.pictureProfile = UpdatePictureService.retrievePic();
-                }
-            }, 100);
+           if(newValue) {
+                $timeout(function() {
+                    var path = UpdatePictureService.retrievePicPath();
+                    var userData = UpdatePictureService.getUserData();
+                    if (path) {
+                        $scope.pictureProfile = path;    
+                    } else {
+                        $scope.pictureProfile = UpdatePictureService.retrievePic();
+                    }
+                    
+                    if (userData) {
+                        $scope.name = userData.name;
+                    } else {
+                        $scope.name = "No name";
+                    }
+                }, 100);
+           }
        }, true);
        
        

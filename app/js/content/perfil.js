@@ -9,6 +9,8 @@
     function ProfileUpdateController($scope, GetUserDataService, userData, Upload, UpdatePictureService) {
         $scope.uploaded = false;
         $scope.picFile = null;
+        $scope.userData = null;
+        
         $scope.loadedPicture = UpdatePictureService.retrievePic();
         $scope.$watch('picFile', function(newValue, oldValue) {
             if (newValue) {
@@ -23,8 +25,20 @@
             }
         })
         
+        $scope.$watch('user', function(newValue, oldValue) {
+            if (newValue) {
+                UpdatePictureService.storeUserData(newValue);
+            }
+        }, true);
+        
+        
+        $scope.update = function(userData) {
+            UpdatePictureService.storeUserData(userData);
+        }
+        
         var init = function() {
-             $scope.userData = userData;
+            //  $scope.userData = userData;
+            $scope.user = UpdatePictureService.getUserData();
         };
         
         init();

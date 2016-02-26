@@ -94,7 +94,6 @@
         }
         
         $scope.goto = function(args) {
-            console.log(args);
             $location.path('/button/candidatos/' + args.details.label);
         }
 

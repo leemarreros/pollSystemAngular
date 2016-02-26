@@ -369,18 +369,18 @@
     UpdatePictureService.$inject = ['localStorageService'];
     function UpdatePictureService(localStorageService) {
         var storageImageKey = "pic_localstorage";
+        var storageUserDataKey = "userData_localstorage";
         var service = {};
         var path = null;
         service.picture = null;
+        service.userData = null;
         
         service.storeImage = function(picture) {
             localStorageService.add(storageImageKey, picture);
             service.picture = picture;
-            console.log('image added', picture);
         }
         
         service.retrievePic = function() {
-            console.log('retrieving pic', localStorageService.get(storageImageKey));
             return localStorageService.get(storageImageKey);
         }
         
@@ -390,6 +390,15 @@
         
         service.retrievePicPath = function() {
             return path;
+        }
+        
+        service.storeUserData = function(userData) {
+            localStorageService.add(storageUserDataKey, userData);
+            service.userData = userData;
+        }
+        
+        service.getUserData = function() {
+            return localStorageService.get(storageUserDataKey);
         }
         
         return service;
