@@ -1,1 +1,20 @@
-<h1>Perfil</h1>
+<div id="content-profile">
+    <div class="image-side-prof">
+        <div class="wrapper-image-profile" style="background-image: url({{loadedPicture}})"></div>
+        <button ngf-select ng-model="picFile" accept="image/*">Change Picture</button>
+    </div>
+    <div class="data-side-prof">
+        <h1 class="title-user-data">Datos del Usuario</h1>
+        <form novalidate class="form-user-data">
+            <input type="text" ng-model="user.name" placeholder="Nombres y apellidos" class="input-name"/><br />
+            <div class="form-col-2">
+                <input type="text" ng-model="user.departamento" placeholder="Departamento" class="input-departamento"/><br />
+                <input type="text" ng-model="user.ciudad" placeholder="Ciudad" class="input-ciudad"/><br />
+            </div>
+            <input type="text" ng-model="user.calle" placeholder="Calle y número" class="input-calle"/><br />
+            <input type="email" ng-model="user.email" placeholder="Correo Electrónico" /><br />
+            <textarea type="text" ng-model="user.bio" placeholder="Breve descripción" class="input-bio"/><br />
+            <input type="submit" ng-click="update(user)" value="Save" />
+        </form>
+    </div>
+</div>

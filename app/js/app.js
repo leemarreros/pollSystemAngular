@@ -4,7 +4,10 @@
         'ngRoute',
         'ngMaterial',
         'ngAnimate',
-        'ngtweet'
+        'ngtweet',
+        'ngFileUpload',
+        'ngImgCrop',
+        'LocalStorageModule'
     ])
     .config(['$routeProvider', function($routeProvider) {
         $routeProvider.when('/', {
@@ -33,7 +36,13 @@
         $routeProvider.when('/button/perfil', {
             templateUrl: 'partials/content/perfil.html',
             topNav: 'partials/top-nav/top-nav-p.html',
-            leftNav: 'partials/left-nav.html'
+            leftNav: 'partials/left-nav.html',
+            controller: 'ProfileUpdateController',
+            resolve: {
+                userData: ['GetUserDataService', function(GetUserDataService){
+                    return GetUserDataService.getUserData();
+                }]
+            }
         });
         
         $routeProvider.when('/button/candidatos/:id', {

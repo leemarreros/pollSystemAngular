@@ -43,3 +43,23 @@
         return PollCandidate;
     }
 })();
+
+(function() {
+'use strict';
+
+    angular
+        .module('app')
+        .factory('UserDetails', UserDataService);
+
+    function UserDataService() {
+        function UserDetails(args) {
+            this.name = args.name;
+            this.state = args.state;
+            this.city = args.city;
+            this.street = args.street;
+            this.bio = args.bio;
+            this.picture = args.picture;
+        }
+        return UserDetails;
+    }
+})();

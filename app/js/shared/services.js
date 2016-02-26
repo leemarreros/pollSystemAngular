@@ -307,7 +307,7 @@
     angular
         .module('app')
         .factory('LeftAndTopService', LeftAndTopService);
-
+        
     function LeftAndTopService() {
        var service = {};
        var current = 'candidatos';
@@ -320,5 +320,79 @@
        }
        
        return service;
+    }
+})();
+
+(function() {
+'use strict';
+
+    angular
+        .module('app')
+        .factory('GetUserDataService', GetUserDataService);
+        
+    GetUserDataService.$inject = ['UserDetails'];
+    function GetUserDataService(UserDetails) {
+        var service = {};
+        var userData;
+        
+        function retrieveData() {
+            userData = new UserDetails({
+                "name": "Steve Lee Marreros",
+                "state": "",
+                "city": "",
+                "street": "",
+                "bio": "",
+                "picture": ""
+            });
+        }
+        
+        service.getUserData = function () {
+            return userData;
+        }
+        
+        function init() {
+            retrieveData();
+        }
+        init();
+        return service;
+    }
+    
+})();
+
+(function() {
+'use strict';
+
+    angular
+        .module('app')
+        .factory('UpdatePictureService', UpdatePictureService);
+
+    UpdatePictureService.$inject = ['localStorageService'];
+    function UpdatePictureService(localStorageService) {
+        var storageImageKey = "pic_localstorage";
+        var service = {};
+        var path = null;
+        service.picture = null;
+        
+        service.storeImage = function(picture) {
+            localStorageService.add(storageImageKey, picture);
+            service.picture = picture;
+            console.log('image added', picture);
+        }
+        
+        service.retrievePic = function() {
+            console.log('retrieving pic', localStorageService.get(storageImageKey));
+            return localStorageService.get(storageImageKey);
+        }
+        
+        service.storePicPath = function(picPath) {
+            path = picPath;
+        }
+        
+        service.retrievePicPath = function() {
+            return path;
+        }
+        
+        return service;
+
     }
 })();
