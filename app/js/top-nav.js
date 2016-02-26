@@ -5,8 +5,8 @@
         .module('app')
         .controller('TopNavController', TopNavController);
 
-    TopNavController.$inject = ['$scope', 'LeftAndTopService', 'UpdatePictureService', '$timeout'];
-    function TopNavController($scope, LeftAndTopService, UpdatePictureService, $timeout) {
+    TopNavController.$inject = ['$scope', 'LeftAndTopService', 'UpdatePictureService', '$timeout', '$location'];
+    function TopNavController($scope, LeftAndTopService, UpdatePictureService, $timeout, $location) {
        
        $scope.name = UpdatePictureService.getUserData().name;
        $scope.title =  LeftAndTopService.getCurrent();
@@ -32,6 +32,9 @@
            }
        }, true);
        
+       $scope.goto = function(destiny) {
+           $location.path('/button/' + destiny);
+       }
        
     }
 })();

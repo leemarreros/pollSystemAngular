@@ -39,6 +39,22 @@
 #top-nav div:nth-child(1) h1{ 
 }
 
+#back-button {
+    margin-top: 28px;
+    margin-left: 10px;
+    background-color: white;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    cursor: pointer; cursor: hand;    
+}
+
+#back-button h1 {
+    text-align: center;
+    color: #1a237e;
+    margin: 0px;
+}
+
 #user-top-info h1{
     font-size: 18px;    
     font-weight: 100;
